@@ -1,10 +1,9 @@
-Welcome to guide template's documentation!
-==========================================
-
 Contents:
 
 .. toctree::
+   matlab
    :maxdepth: 2
+
 
 
 

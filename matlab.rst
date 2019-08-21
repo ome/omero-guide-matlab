@@ -1,0 +1,204 @@
+Analyze OMERO data using MATLAB
+===============================
+
+Matlab is a powerful programming platform. We show here you can analyze
+data stored in OMERO using Matlab.
+
+We will
+use \ https://docs.openmicroscopy.org/latest/omero/developers/Matlab.html\ as
+a reference.
+
+**Description**
+---------------
+
+Here we demonstrate how to analyze a batch of images associated with the
+paper \ `Subdiffraction imaging of centrosomes reveals higher-order
+organizational features of pericentriolar
+material <https://www.nature.com/articles/ncb2591>`__\ .
+
+We will show:
+
+-  How to connect to OMERO using MATLAB.
+-  How to load data (dataset, channels information, binary data).
+-  How to analyze images. The channel’s name will be used to determine the channel to analyze.
+-  How to save the generated ROIs to OMERO.
+-  How to save the results stored in a CSV file locally back to the OMERO.server as a FileAnnotation.
+-  How to convert the CSV file into an OMERO.table.
+
+
+**Setup**
+---------
+
+1. The OMERO.matlab toolbox and the Image Processing toolbox have been installed.
+
+   a. To install the OMERO.matlab toolbox https://www.openmicroscopy.org/omero/downloads/
+
+   b. The Image Processing toolbox is only necessary for the images
+      analysis. This is a convenient toolbox for analysis purpose.
+      You do not need to install that toolbox to integrate OMERO and
+      MATLAB.
+
+   c. Make sure that the OMERO.matlab toolbox is on the MATLAB path. To
+         add it to the path, you can
+
+   d. Launch MATLAB.
+
+   e. Under the *HOME* tab, click on *Set Path* (middle of the top task bar).
+
+   f. A *Set Path* dialog pops up.
+
+   .. image:: images/matlab1.png
+
+   g. Click on the button *Add with Subfolders...*
+
+   h. Select the OMERO.matlab toolbox, Click *Open*.
+
+   i. Close the *Set Path* dialog, you can either save the path for future use or not.
+
+**Resources**
+-------------
+
+We will use:
+
+-  Data from Image Data Resource (IDR) \ https://idr.openmicroscopy.org/webclient/?show=project-51
+
+-  Script \ https://github.com/ome/training-scripts/blob/master/practical/matlab/idr0021_steps.m
+
+For convenience, the IDR data have been imported into the training
+OMERO.server. This is only because we cannot save results back to IDR
+which is a read-only OMERO.server.
+
+**Step-by-Step**
+----------------
+
+1. In the *EDITOR* tab create a new script:
+
+.. image:: images/matlab2.png
+
+2. Copy the code for the exercises from \ https://raw.githubusercontent.com/ome/training-scripts/master/practical/matlab/idr0021_steps.m
+
+3. Paste it into the new file and save the script under whatever name you like. 
+   **DO NOT RUN** the whole script.
+
+4. To follow along the exercises only select the code block of each
+   exercise and run it with "Evaluate Selection":
+
+   .. image:: images/matlab3.png
+
+5. Later exercises cannot be run unless the previous exercises have been
+   executed successfully.
+
+6. If **you get stuck**, right-click on the *Workspace* tab, clear the
+   workspace and start again from the beginning:
+
+   .. image:: images/matlab4.png
+
+**Exercise 1**
+~~~~~~~~~~~~~~
+
+**Objectives:** Connect to OMERO and print out your group ID.
+
+**Steps:**
+
+-  Replace the USER and PASSWORD placeholders with your assigned credentials.
+
+-  Select the code block of **Exercise 1**
+
+-  Run it with “Evaluate Selection”.
+
+**Exercise 2**
+~~~~~~~~~~~~~~
+
+**Objectives:** Load dataset and list the images contained in the dataset.
+
+**Steps:**
+
+-  In OMERO.web find the dataset ‘matlab-dataset’ (in Project ‘matlab-project’)
+
+-  Copy its ID
+
+-  In the matlab code replace DATASET_ID with this ID
+
+-  Run the code block.
+
+**Exercise 3**
+~~~~~~~~~~~~~~
+
+**Objectives:** Read metadata; in particular find out which protein is the
+target in the images by looking through the image’s map annotations
+(key-value pairs). It is the same protein for all four sample images.
+
+**Steps:**
+
+-  Select one image from the dataset
+
+-  Load the map annotation linked to the image
+
+-  Select the entry whose key is 'Antibody Target'
+
+**Exercise 4**
+~~~~~~~~~~~~~~
+
+**Objectives:** Find out in which channels the target protein is stained.
+
+**Steps:**
+
+-  Iterate through the dataset
+
+-  For each Image
+
+   -  Find the channel’s name using the LogicalChannel
+
+   -  Determine the index of the channel whose name matches the value
+      found in the previous exercise
+
+**Exercise 5**
+~~~~~~~~~~~~~~
+
+**Objectives:** Perform a simple image segmentation on one image and display
+the result.
+
+**Steps:**
+
+-  Iterate through the dataset
+
+-  Analyze the image whose name is *siControl_N20_Cep215_I_20110411_Mon-1509_0_SIR_PRJ.dv*
+
+-  Retrieve the plane with ``z=0, t=0, c=channel-1``. Indexes start at `0` in OMERO.
+
+-  Determine the mean, the standard deviation.
+
+**Exercise 6**
+~~~~~~~~~~~~~~
+
+**Objectives:** Perform the image segmentation on the whole dataset and save
+the results as ROIs and CSV file. The CSV file is saved as a FileAnnotation
+
+**Exercise 7**
+~~~~~~~~~~~~~~
+
+**Objectives:** Save the results as OMERO.table. This shows how to convert
+the CSV file into an OMERO.table
+
+**Steps:** 
+
+-  Run the code
+
+-  Go back to OMERO.web
+
+-  Select an image from the evaluated dataset
+
+-  Expand the *Tables* harmonica. You should see the results there.
+
+-  Double-click on the thumbnail of the image and inspect the ROIs in OMERO.iviewer.
+
+-  Note: You can also use OMERO.parade on the OMERO.table data created in this manner.
+         As OMERO.parade works only on Projects, in OMERO.web
+
+   -  Create a new Project
+
+   -  Put the analyzed Dataset into that Project
+
+   -  Attach the OMERO.table created in **Exercise 7** to the Project
+
+   -  Now you can use OMERO.parade on the Project
