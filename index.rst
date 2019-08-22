@@ -1,3 +1,6 @@
+MATLAB
+======
+
 Contents:
 
 .. toctree::
