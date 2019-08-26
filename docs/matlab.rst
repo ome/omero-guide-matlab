@@ -29,31 +29,31 @@ We will show:
 **Setup**
 ---------
 
-1. The OMERO.matlab toolbox and the Image Processing toolbox have been installed.
+#. The OMERO.matlab toolbox and the Image Processing toolbox have been installed.
 
-   a. To install the OMERO.matlab toolbox https://www.openmicroscopy.org/omero/downloads/
+   - To install the OMERO.matlab toolbox https://www.openmicroscopy.org/omero/downloads/
 
-   b. The Image Processing toolbox is only necessary for the images
+   - The Image Processing toolbox is only necessary for the images
       analysis. This is a convenient toolbox for analysis purpose.
       You do not need to install that toolbox to integrate OMERO and
       MATLAB.
 
-   c. Make sure that the OMERO.matlab toolbox is on the MATLAB path. To
+   - Make sure that the OMERO.matlab toolbox is on the MATLAB path. To
          add it to the path, you can
 
-   d. Launch MATLAB.
+   - Launch MATLAB.
 
-   e. Under the *HOME* tab, click on *Set Path* (middle of the top task bar).
+   - Under the *HOME* tab, click on *Set Path* (middle of the top task bar).
 
-   f. A *Set Path* dialog pops up.
+   - A *Set Path* dialog pops up.
 
    .. image:: images/matlab1.png
 
-   g. Click on the button *Add with Subfolders...*
+   - Click on the button *Add with Subfolders...*
 
-   h. Select the OMERO.matlab toolbox, Click *Open*.
+   - Select the OMERO.matlab toolbox, Click *Open*.
 
-   i. Close the *Set Path* dialog, you can either save the path for future use or not.
+   - Close the *Set Path* dialog, you can either save the path for future use or not.
 
 **Resources**
 -------------
@@ -71,24 +71,24 @@ which is a read-only OMERO.server.
 **Step-by-Step**
 ----------------
 
-1. In the *EDITOR* tab create a new script:
+#. In the *EDITOR* tab create a new script:
 
 .. image:: images/matlab2.png
 
-2. Copy the code for the exercises from \ https://raw.githubusercontent.com/ome/training-scripts/master/practical/matlab/idr0021_steps.m
+#. Copy the code for the exercises from \ https://raw.githubusercontent.com/ome/training-scripts/master/practical/matlab/idr0021_steps.m
 
-3. Paste it into the new file and save the script under whatever name you like. 
+#. Paste it into the new file and save the script under whatever name you like. 
    **DO NOT RUN** the whole script.
 
-4. To follow along the exercises only select the code block of each
+#. To follow along the exercises only select the code block of each
    exercise and run it with "Evaluate Selection":
 
    .. image:: images/matlab3.png
 
-5. Later exercises cannot be run unless the previous exercises have been
+#. Later exercises cannot be run unless the previous exercises have been
    executed successfully.
 
-6. If **you get stuck**, right-click on the *Workspace* tab, clear the
+#. If **you get stuck**, right-click on the *Workspace* tab, clear the
    workspace and start again from the beginning:
 
    .. image:: images/matlab4.png
