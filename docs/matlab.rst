@@ -52,19 +52,19 @@ We will use:
 
 -  Data from Image Data Resource (IDR) \ https://idr.openmicroscopy.org/webclient/?show=project-51
 
--  Script \ https://github.com/ome/training-scripts/blob/master/practical/matlab/idr0021_steps.m
-
 For convenience, the IDR data have been imported into the training
 OMERO.server. This is only because we cannot save results back to IDR which is a read-only OMERO.server.
 
 **Step-by-Step**
 ----------------
 
+The script used in this document is :download:`idr0021_steps.m <../scripts/idr0021_steps.m>`.
+
 #. In the *EDITOR* tab create a new script:
 
    .. image:: images/matlab2.png
 
-#. Copy the code for the exercises from \ https://raw.githubusercontent.com/ome/training-scripts/master/practical/matlab/idr0021_steps.m
+#. Copy the code for the exercises from :download:`idr0021_steps.m <../scripts/idr0021_steps.m>`
 
 #. Paste it into the new file and save the script under whatever name you like. **DO NOT RUN** the whole script.
 
