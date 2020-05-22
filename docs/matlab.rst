@@ -27,7 +27,7 @@ We will show:
 
    - To install the OMERO.matlab toolbox https://www.openmicroscopy.org/omero/downloads/
 
-   - The Image Processing toolbox is only necessary for the image analysis. This is a convenient toolbox for analysis purpose. You do not need to install that toolbox to integrate OMERO and MATLAB.
+   - The `Image Processing toolbox <https://uk.mathworks.com/products/image.html>`_ is only necessary for the image analysis. This is a convenient toolbox for analysis purpose. You do not need to install that toolbox to integrate OMERO and MATLAB.
 
    - Make sure that the OMERO.matlab toolbox is on the MATLAB path. To add it to the path, you can
 
