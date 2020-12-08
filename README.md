@@ -2,6 +2,8 @@
 
 [![Documentation Status](https://readthedocs.org/projects/omero-guide-matlab/badge/?version=latest)](https://omero-guides.readthedocs.io/en/latest/matlab/docs/index.html)
 
+[![Actions Status](https://github.com/ome/omero-guide-matlab/workflows/sphinx/badge.svg)](https://github.com/ome/omero-guide-matlab/actions)
+
 The documentation is deployed at [Use Matlab API](https://omero-guides.readthedocs.io/en/latest/matlab/docs/index.html).
 
 This is a Sphinx based documentation. 
