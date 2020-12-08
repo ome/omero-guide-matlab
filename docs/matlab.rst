@@ -5,8 +5,8 @@ Matlab is a powerful programming platform. We show here you can analyze data sto
 
 We will use  \ https://docs.openmicroscopy.org/latest/omero/developers/Matlab.html\  as a reference.
 
-**Description**
----------------
+Description
+-----------
 
 Here we demonstrate how to analyze a batch of images associated with the paper \ `Subdiffraction imaging of centrosomes reveals higher-order organizational features of pericentriolar material <https://www.nature.com/articles/ncb2591>`__\ .
 
@@ -19,44 +19,24 @@ We will show:
 -  How to save the results stored in a CSV file locally back to the OMERO.server as a FileAnnotation.
 -  How to convert the CSV file into an OMERO.table.
 
+Setup
+-----
 
-**Setup**
+Please read :doc:`setup` first.
+
+Resources
 ---------
-
-#. The OMERO.matlab toolbox and the Image Processing toolbox have been installed.
-
-   - To install the OMERO.matlab toolbox https://www.openmicroscopy.org/omero/downloads/
-
-   - The `Image Processing toolbox <https://uk.mathworks.com/products/image.html>`_ is only necessary for the image analysis. This is a convenient toolbox for analysis purpose. You do not need to install that toolbox to integrate OMERO and MATLAB.
-
-   - Make sure that the OMERO.matlab toolbox is on the MATLAB path. To add it to the path, you can
-
-   - Launch MATLAB.
-
-   - Under the *HOME* tab, click on *Set Path* (middle of the top task bar).
-
-     .. image:: images/matlab1.png
-
-   - A *Set Path* dialog pops up.
-
-   - Click on the button *Add with Subfolders...*
-
-   - Select the OMERO.matlab toolbox, Click *Open*.
-
-   - Close the *Set Path* dialog, you can either save the path for future use or not.
-
-**Resources**
--------------
 
 We will use:
 
--  Data from Image Data Resource (IDR) \ https://idr.openmicroscopy.org/webclient/?show=project-51
+-  Images from IDR `idr0021 <https://idr.openmicroscopy.org/search/?query=Name:idr0021>`_.
 
 For convenience, the IDR data have been imported into the training
-OMERO.server. This is only because we cannot save results back to IDR which is a read-only OMERO.server.
+OMERO.server. This is **only** because we **cannot** save results back to IDR
+which is a read-only OMERO.server.
 
-**Step-by-Step**
-----------------
+Step-by-Step
+------------
 
 The script used in this document is :download:`idr0021_steps.m <../scripts/idr0021_steps.m>`.
 
