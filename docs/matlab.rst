@@ -22,7 +22,7 @@ We will show:
 Setup
 -----
 
-Please read first :doc:`setup`.
+Please read :doc:`setup` first.
 
 Resources
 ---------
