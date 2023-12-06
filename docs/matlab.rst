@@ -1,7 +1,7 @@
 Analyze OMERO data using MATLAB
 ===============================
 
-Matlab is a powerful programming platform. We show here you can analyze data stored in OMERO using Matlab.
+MATLAB is a powerful programming platform. We show here you can analyze data stored in OMERO using MATLAB.
 
 We will use  \ https://docs.openmicroscopy.org/latest/omero/developers/Matlab.html\  as a reference.
 
@@ -82,7 +82,7 @@ The script used in this document is :download:`idr0021_steps.m <../scripts/idr00
 
 -  Copy its ID
 
--  In the matlab code replace DATASET_ID with this ID
+-  In the MATLAB code replace DATASET_ID with this ID
 
 -  Run the code block.
 
