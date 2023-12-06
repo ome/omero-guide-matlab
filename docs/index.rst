@@ -9,5 +9,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
    
+   matlabonline
    setup
    matlab

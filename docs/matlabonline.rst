@@ -1,0 +1,4 @@
+Analyze OMERO data using MATLAB Online
+======================================
+
+This workflow was contributed by community, see https://github.com/mathworks/Open-Microscopy-Data-MATLAB. It allows to work with OMERO data via MATLAB Online. In this way, there is no need to download and install MatLab locally as MatLab is running in your browser. You will need a valid Mathworks account. An easy to understand environment with Jupyter Notebooks is provided. Follow the steps on the https://uk.mathworks.com/matlabcentral/fileexchange/156034-open-microscopy-data-matlab.
